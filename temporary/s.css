@@ -85,7 +85,7 @@ footer a:hover {
 }
 @media (max-width: 426px) {
     header {
-        margin: 3rem 0 2rem 0;
+        margin: 1.5rem 0 2rem 0;
     }
     header .logo {
         width: 45px;
@@ -103,7 +103,7 @@ footer a:hover {
         line-height: 150%;
     }
     footer {
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
     footer p {
         font-family: 'Roboto';
