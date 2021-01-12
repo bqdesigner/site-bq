@@ -1,5 +1,5 @@
 @import 'guide';
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,900;1,700&display=swap');
 // ::selection {
     
 // }
@@ -7,4 +7,123 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+}
+// Header
+header.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.menu {
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+           display: inline;
+           margin: 0 1rem 0 0;
+           a {
+              color: $color-gray_300;
+              @include fontSize(16px);
+              font-weight: 400;
+              @include transition(all 0.3s ease-in-out 0s);
+              &:hover {
+                 color: $color-primary;
+                 text-decoration: none;
+              }
+           }
+           &:last-child {
+               background-color: $color-primary;
+               padding: .8rem 1.5rem;
+               border-radius: 1.5rem;
+               a {
+                   color: $color-white;
+                   &:hover {
+                       color: none;
+                   }
+               }
+           }
+        }
+     }
+}
+// Gerais
+#presentation, #jobs-done, #profile {
+    margin-bottom: 10rem;
+}
+// Apresentação
+#presentation {
+    margin-top: 10rem;
+    h1 {
+        @include fontSize(40px);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        color: $color-secondary;
+        text-transform: uppercase;
+        line-height: 120%;
+        letter-spacing: 2px;
+    }
+    p {
+        @include fontSize(18px);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        color: $color_gray-200;
+        width: 85%;
+        line-height: 180%;
+        a {
+            font-weight: 500;
+            color: $color_gray-200;
+            position: absolute;
+            &::after {
+                content: '';
+                display: block;
+                background: rgba($color-primary, .15);
+                height: .4rem;
+                width: 100%;
+                top: 1.2rem;
+                // left: -3rem;
+                position: absolute;
+                z-index: -1;
+            }
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+// Trabalhos
+#jobs-done {
+    h2 {
+        @include fontSize(32px);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        color: $color-secondary;
+        text-transform: uppercase;
+        margin-bottom: 3rem;
+    }
+    .row .job {
+        &:nth-child(2), &:nth-child(4) {
+            margin-top: 3rem;
+        }
+    }
+    .job {
+        margin-bottom: 3rem;
+        .job-img {
+            @include width(500px);
+            @include height(476px);
+            background-color: $color-gray_100;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+        .job-link {
+            h3 {
+                @include fontSize(24px);
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+                color: $color-secondary;
+                text-transform: uppercase;
+            }
+        }
+    }
 }

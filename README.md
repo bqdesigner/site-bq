@@ -1,5 +1,5 @@
-# Site Bqdesigner - 2020
-Este é o meu site para a versão de 2020. Essa primeira versão - v1 -, ainda será de maneira estática. A ideia é até o final do ano utilizar algum framework javascript e assim refazê-lo.
+# Meu site profissional - 2021
+Este é o meu site para a versão de 2021. Essa primeira versão - v1 -, e vai com recursos básicos. A ideia, além de trazer mais projetos desenvolvidos, é trazer mais recursos e interatividade para o site.
 
 ---
 
