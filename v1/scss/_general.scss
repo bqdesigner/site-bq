@@ -11,7 +11,8 @@
     overflow: hidden;
 }
 body {
-    padding: 1rem;
+    padding: 0 2rem 2rem 2rem;
+    border-top: .5rem solid $color-primary;
 }
 // Header
 header.container-fluid {
@@ -70,12 +71,8 @@ header.container-fluid {
         letter-spacing: 2px;
     }
     p {
-        @include fontSize(18px);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 300;
-        color: $color_gray-200;
+        @extend %text-content;
         width: 85%;
-        line-height: 180%;
         a {
             font-weight: 500;
             color: $color_gray-200;
@@ -100,11 +97,8 @@ header.container-fluid {
 // Trabalhos
 #jobs-done {
     h2 {
+        @extend %subtitle-base;
         @include fontSize(32px);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 500;
-        color: $color-secondary;
-        text-transform: uppercase;
         margin-bottom: 3rem;
     }
     .row .job {
@@ -117,9 +111,21 @@ header.container-fluid {
         .job-img {
             @include width(500px);
             @include height(476px);
-            background-color: $color-gray_100;
+            background-size: cover;
             border-radius: 4px;
             margin-bottom: 1rem;
+        }
+        .job-1 {
+            background-image: url(../assets/img/mckp_site_cnn.png);
+        }
+        .job-2 {
+            background-image: url(../assets/img/mckp_site_wiseapp.png);
+        }
+        .job-3 {
+            background-image: url(../assets/img/mckp_site_bant.png);
+        }
+        .job-4 {
+            background-image: url(../assets/img/mckp_site_beebox.png);
         }
         .job-link {
             @include width(500px);
@@ -128,11 +134,8 @@ header.container-fluid {
             align-content: center;
             align-items: center;
             h3 {
+                @extend %subtitle-base;
                 @include fontSize(24px);
-                font-family: 'Montserrat', sans-serif;
-                font-weight: 500;
-                color: $color-secondary;
-                text-transform: uppercase;
             }
             a {
                 @include width(40px);
@@ -181,28 +184,18 @@ header.container-fluid {
             background-size: cover;
         }
         h2 {
+            @extend %subtitle-base;
             @include fontSize(32px);
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 500;
-            color: $color-secondary;
-            text-transform: uppercase;
         }
     }
     p {
-        @include fontSize(18px);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 300;
-        color: $color_gray-200;
-        line-height: 180%;
+        @extend %text-content;
         margin-bottom: 2rem;
     }
     .content-list {
         h3 {
+            @extend %subtitle-base;
             @include fontSize(20px);
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 500;
-            color: $color-secondary;
-            text-transform: uppercase;
             margin-bottom: 1.5rem;
         }
         ul {
@@ -233,24 +226,9 @@ header.container-fluid {
             padding: 0;
             li {
                 margin-right: 1rem;
-                @include fontSize(16px);
-                font-family: 'Montserrat', sans-serif;
-                font-weight: 400;
-                letter-spacing: .5rem;
-                text-transform: uppercase;
                 float: left;
                 a {
-                    color: $color_gray-200;
-                    @include transition(all 0.3s ease-in-out 0s);
-                    &:hover {
-                        text-decoration: none;
-                        color: $color-primary;
-                    }
-                    &::after {
-                        content: '\f061';
-                        font-family: FontAwesome;
-                        color: $color-secondary;
-                    }
+                    @extend %social-link;
                 }
             }
         }
@@ -271,22 +249,7 @@ footer {
             text-transform: uppercase;
         }
         a {
-            @include fontSize(16px);
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 400;
-            letter-spacing: .5rem;
-            text-transform: uppercase;
-            color: $color_gray-200;
-            @include transition(all 0.3s ease-in-out 0s);
-            &:hover {
-                text-decoration: none;
-                color: $color-primary;
-            }
-            &::after {
-                content: '\f061';
-                font-family: FontAwesome;
-                color: $color-secondary;
-            }
+            @extend %social-link;
         }
     }
     .year {
