@@ -10,10 +10,10 @@
     padding: 0;
     overflow: hidden;
 }
-body {
-    padding: 0 2rem 2rem 2rem;
-    border-top: .5rem solid $color-primary;
-}
+// body {
+//     padding: 0 2rem 2rem 2rem;
+//     border-top: .5rem solid $color-primary;
+// }
 // Header
 header.container-fluid {
     display: flex;
@@ -54,21 +54,15 @@ header.container-fluid {
         }
      }
 }
-// Gerais
+// General
 #presentation, #jobs-done, #profile {
     margin-bottom: 10rem;
 }
-// Apresentação
+// Presentation
 #presentation {
     margin-top: 10rem;
     h1 {
-        @include fontSize(40px);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 900;
-        color: $color-secondary;
-        text-transform: uppercase;
-        line-height: 120%;
-        letter-spacing: 2px;
+        @extend %title-base;
     }
     p {
         @extend %text-content;
@@ -94,7 +88,7 @@ header.container-fluid {
         }
     }
 }
-// Trabalhos
+// Jobs
 #jobs-done {
     h2 {
         @extend %subtitle-base;
@@ -160,6 +154,8 @@ header.container-fluid {
 }
 // Profile
 #profile {
+    width: 96%;
+    margin-left: 2%;
     background-color: rgba(#f6f4f4, 1);
     border-radius: 4px;
     .author {
@@ -234,7 +230,7 @@ header.container-fluid {
         }
     }
 }
-//Rodape
+//Footer
 footer {
     .contact {
         display: flex;
@@ -259,6 +255,102 @@ footer {
         letter-spacing: .5rem;
         text-transform: uppercase;
         color: $color-gray_300;
+        margin-bottom: 3rem;
+    }
+}
+//Work page
+.cover-job {
+    width: 100%;
+    @include height(500px);
+    background-color: $color-gray_100;
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    flex-direction: column;
+    position: relative;
+    // &::before {
+    //     position: absolute;
+    //     bottom: 0;
+    //     z-index: 1;
+    //     background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.4) 85%, black 110%, #000 100%);
+    //     background-repeat: no-repeat;
+    //     background-position: center;
+    //     width: 100%;
+    //     height: 100%;
+    //     content: '';
+    // }
+    h1 {
+        @extend %title-base;
+        margin-bottom: 3rem;
+    }
+}
+//Intro Job
+.intro-job {
+    margin: 2rem 0 5rem 0;
+    p {
+        @extend %text-content;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            h4 {
+                margin-bottom: 1rem;
+                @include fontSize(16px);
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+                color: $color-secondary;
+            }
+            p {
+                @extend %text-content;
+                margin-bottom: 2rem;
+            }
+        }
+        li::before {
+            @extend %icon-before;
+            float: left;
+            margin-right: 1rem;
+            content: '';
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        li:nth-child(1)::before {
+            background-image: url(../assets/icons/ico_done.svg);
+        }
+        li:nth-child(2)::before {
+            background-image: url(../assets/icons/ico_map.svg);
+        }
+        li:nth-child(3)::before {
+            background-image: url(../assets/icons/ico_global.svg);
+        }
+        
+    }
+}
+.understand-job, .result-job {
+    margin-bottom: 5rem;
+    h2 {
+        @extend %subtitle-base;
+        @include fontSize(24px);
+        margin-bottom: 1.5rem;
+    }
+    p {
+        @extend %text-content;
+    }
+}
+// Result job
+.result-job {
+    .row .col-12 {
+        &:nth-child(2), &:nth-child(4), &:nth-child(6) {
+            margin-top: 3rem;
+        }
+    }
+    .result-job-container {
+        @include width(500px);
+        @include height(476px);
+        background-color: $color-gray_100;
+        background-size: cover;
+        border-radius: 4px;
         margin-bottom: 3rem;
     }
 }
