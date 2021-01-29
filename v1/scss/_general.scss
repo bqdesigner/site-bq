@@ -91,6 +91,11 @@ header.container-fluid {
 }
 // Jobs
 #jobs-done {
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
     h2 {
         @extend %subtitle-base;
         @include fontSize(32px);
@@ -103,6 +108,10 @@ header.container-fluid {
     }
     .job {
         margin-bottom: 3rem;
+        transition: transform .2s;
+        &:hover {
+            transform: scale(1.03);
+        }
         .job-img {
             width: 100%;
             @include height(476px);
@@ -134,7 +143,7 @@ header.container-fluid {
                 @extend %subtitle-base;
                 @include fontSize(24px);
             }
-            a {
+            span {
                 @include width(40px);
                 @include height(40px);
                 background-color: $color-primary;
@@ -143,9 +152,6 @@ header.container-fluid {
                 justify-content: center;
                 align-content:center;
                 align-items: center;
-                &:hover {
-                    text-decoration: none;
-                }
                 &::after {
                     content: '\f061';
                     font-family: FontAwesome;
