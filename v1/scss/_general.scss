@@ -67,6 +67,7 @@ header.container-fluid {
     p {
         @extend %text-content;
         width: 85%;
+        position: relative;
         a {
             font-weight: 500;
             color: $color_gray-200;
@@ -103,9 +104,11 @@ header.container-fluid {
     .job {
         margin-bottom: 3rem;
         .job-img {
-            @include width(500px);
+            width: 100%;
             @include height(476px);
             background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
             border-radius: 4px;
             margin-bottom: 1rem;
         }
@@ -122,7 +125,7 @@ header.container-fluid {
             background-image: url(../assets/img/mckp_site_beebox.png);
         }
         .job-link {
-            @include width(500px);
+            width: 100%;
             display: flex;
             justify-content: space-between;
             align-content: center;
@@ -221,6 +224,13 @@ header.container-fluid {
             margin: 0;
             padding: 0;
             li {
+                &:first-child {
+                    @extend %subtitle-base;
+                    @include fontSize(20px);
+                    position: relative;
+                    top: -2px;
+                    margin-right: 2rem;
+                }
                 margin-right: 1rem;
                 float: left;
                 a {
@@ -232,6 +242,9 @@ header.container-fluid {
 }
 //Footer
 footer {
+    .row {
+        margin: 0;
+    }
     .contact {
         display: flex;
         justify-content: space-between;
@@ -268,20 +281,11 @@ footer {
     align-content: flex-end;
     flex-direction: column;
     position: relative;
-    // &::before {
-    //     position: absolute;
-    //     bottom: 0;
-    //     z-index: 1;
-    //     background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.4) 85%, black 110%, #000 100%);
-    //     background-repeat: no-repeat;
-    //     background-position: center;
-    //     width: 100%;
-    //     height: 100%;
-    //     content: '';
-    // }
-    h1 {
+    h1 { 
         @extend %title-base;
+        color: $color-secondary;
         margin-bottom: 3rem;
+        z-index: 2;
     }
 }
 //Intro Job
@@ -294,19 +298,6 @@ footer {
         list-style: none;
         padding: 0;
         margin: 0;
-        li {
-            h4 {
-                margin-bottom: 1rem;
-                @include fontSize(16px);
-                font-family: 'Montserrat', sans-serif;
-                font-weight: 500;
-                color: $color-secondary;
-            }
-            p {
-                @extend %text-content;
-                margin-bottom: 2rem;
-            }
-        }
         li::before {
             @extend %icon-before;
             float: left;
@@ -324,7 +315,19 @@ footer {
         li:nth-child(3)::before {
             background-image: url(../assets/icons/ico_global.svg);
         }
-        
+        li {
+            h4 {
+                margin-bottom: 1rem;
+                @include fontSize(16px);
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+                color: $color-secondary;
+            }
+            p {
+                @extend %text-content;
+                margin-bottom: 2rem;
+            }
+        }        
     }
 }
 .understand-job, .result-job {
@@ -346,7 +349,7 @@ footer {
         }
     }
     .result-job-container {
-        @include width(500px);
+        width: 100%;
         @include height(476px);
         background-color: $color-gray_100;
         background-size: cover;

@@ -55,6 +55,9 @@ $color-gray_300: rgba(46,49,49, 1);
     font-weight: 300;
     color: $color_gray-200;
     line-height: 180%;
+    @media (max-width: 575px) {
+        @include fontSize(16px);
+    }
 }
 %social-link {
     @include fontSize(16px);
@@ -82,6 +85,9 @@ $color-gray_300: rgba(46,49,49, 1);
     text-transform: uppercase;
     line-height: 120%;
     letter-spacing: 2px;
+    @media (max-width: 767px) {
+        @include fontSize(28px);
+    }
 }
 %subtitle-base {
     font-family: 'Montserrat', sans-serif;

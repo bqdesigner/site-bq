@@ -1,15 +1,103 @@
 @media (max-width: 1199px) {
-    
-}
-@media (max-width: 1157px) {
-    
+    .intro-job {
+        ul {
+            li::before {
+            float: none;
+            margin: 0 0 1rem 0;
+            }
+            li {
+                p {
+                    margin-bottom: 1rem;
+                }
+            } 
+        }
+    }
 }
 @media (max-width: 991px) {
-    
-}
-@media (max-width: 845px) {
-    
+    #jobs-done {
+        .job {
+            .job-img {
+                @include height(320px);
+            }
+        }
+    }
+    .result-job {
+        .result-job-container {
+            @include height(320px);
+        }
+    }
 }
 @media (max-width: 767px) {
-    
+    #presentation {
+        p {
+            width: 100%;
+        }
+    }
+    #jobs-done {
+        .row .job {
+            &:nth-child(2), &:nth-child(4) {
+                margin-top: 0;
+            }
+        }
+    }
+    #profile {
+        .social-media {
+            ul {
+                li {
+                    margin: 0 0 1rem 0;
+                    float: none;
+                }
+            }
+        }
+    }
+    footer {
+        h2 {
+            margin-bottom: 2rem;
+        }
+    }
+    .intro-job {
+        p {
+            margin-bottom: 3rem;
+        }
+    }
+    .result-job {
+        .row .col-12 {
+            &:nth-child(2), &:nth-child(4), &:nth-child(6) {
+                margin-top: 0;
+            }
+        }
+    }
+}
+@media (max-width: 575px) {
+    header.container-fluid {
+        padding: 2rem 1rem;
+    }
+    .menu {
+        ul {
+            li {
+                margin: 0;
+            }
+        }
+    }
+    #presentation, #jobs-done, #profile {
+        margin-bottom: 7rem;
+    }
+    #presentation {
+        margin-top: 5rem;
+        p {
+            a {
+                display: block;
+            }
+        }
+    }
+    #jobs-done {
+        h2 {
+            @include fontSize(24px);
+        }
+        .job {
+            .job-link {
+                @include fontSize(20px);
+            }
+        }
+    }
 }
