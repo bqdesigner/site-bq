@@ -31,14 +31,16 @@ header.container-fluid {
            display: inline;
            margin: 0 1rem 0 0;
            a {
-              color: $color-gray_300;
-              @include fontSize(16px);
-              font-weight: 400;
-              @include transition(all 0.3s ease-in-out 0s);
-              &:hover {
-                 color: $color-primary;
-                 text-decoration: none;
-              }
+               font-family: 'Montserrat', sans-serif;
+               font-weight: 300;
+               color: $color-gray_300;
+               @include fontSize(16px);
+               font-weight: 400;
+               @include transition(all 0.3s ease-in-out 0s);
+               &:hover {
+                   color: $color-primary;
+                   text-decoration: none;
+                }
            }
            &:last-child {
                background-color: $color-primary;
@@ -68,7 +70,7 @@ header.container-fluid {
         @extend %text-content;
         width: 85%;
         position: relative;
-        a {
+        span {
             font-weight: 500;
             color: $color_gray-200;
             position: absolute;
@@ -82,9 +84,6 @@ header.container-fluid {
                 // left: -3rem;
                 position: absolute;
                 z-index: -1;
-            }
-            &:hover {
-                text-decoration: none;
             }
         }
     }
@@ -280,8 +279,8 @@ footer {
 //Work page
 .cover-job {
     width: 100%;
-    @include height(500px);
-    background-color: $color-gray_100;
+    @include height(220px);
+    // background-color: $color-gray_100;
     display: flex;
     justify-content: flex-end;
     align-content: flex-end;
@@ -299,6 +298,9 @@ footer {
     margin: 2rem 0 5rem 0;
     p {
         @extend %text-content;
+    }
+    .capitalize {
+        text-transform: capitalize;
     }
     ul {
         list-style: none;
@@ -333,6 +335,25 @@ footer {
                 @extend %text-content;
                 margin-bottom: 2rem;
             }
+            a {
+                font-weight: 500;
+                color: $color-primary;
+                position: absolute;
+                @include fontSize(18px);
+                &::after {
+                    content: '';
+                    display: block;
+                    background: rgba($color-primary, .15);
+                    height: .4rem;
+                    width: 100%;
+                    top: 1.2rem;
+                    position: absolute;
+                    z-index: -1;
+                }
+                &:hover {
+                    text-decoration: none;
+                }
+            }
         }        
     }
 }
@@ -356,10 +377,75 @@ footer {
     }
     .result-job-container {
         width: 100%;
-        @include height(476px);
+        @include height(768px);
         background-color: $color-gray_100;
         background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
         border-radius: 4px;
         margin-bottom: 3rem;
+    }
+    // BGs Bant
+    .job-bant-1 {
+        background-image: url(../assets/img/img_bant_1.jpg);
+    }
+    .job-bant-2 {
+        background-image: url(../assets/img/img_bant_2.jpg);
+    }
+    //BGs Beebox
+    .job-bb-1 {
+        background-image: url(../assets/img/img_bb_1.jpg);
+    }
+    .job-bb-2 {
+        background-image: url(../assets/img/img_bb_2.jpg);
+    }
+    .job-bb-3 {
+        background-image: url(../assets/img/img_bb_3.jpg);
+    }
+    //BGs CNN Brasil
+    .job-cnn-1 {
+        background-image: url(../assets/img/img_cnn_1.jpg);
+    }
+    .job-cnn-2 {
+        background-image: url(../assets/img/img_cnn_2.jpg);
+    }
+    //BGs Wiseapp
+    .job-wise-1 {
+        background-image: url(../assets/img/img_wise_1.jpg);
+    }
+    .job-wise-2 {
+        background-image: url(../assets/img/img_wise_2.jpg);
+    }
+}
+// Next job
+.next-job {
+    width: 100%;
+    @include height(200px);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+    span {
+        @extend %subtitle-base;
+        @include fontSize(24px);
+        margin-bottom: 2rem;
+        display: block;
+    }
+    a {
+        display: block;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        @include fontSize(18px);
+        @include transition(all 0.3s ease-in-out 0s);
+        background-color: $color-primary;
+        padding: .8rem 1.5rem;
+        border-radius: 1.5rem;
+        color: $color-white;
+        &:hover {
+            color: none;
+            text-decoration: none;
+        }
     }
 }

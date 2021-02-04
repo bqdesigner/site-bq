@@ -23,7 +23,7 @@
     }
     .result-job {
         .result-job-container {
-            @include height(320px);
+            @include height(500px);
         }
     }
 }
@@ -99,5 +99,13 @@
                 @include fontSize(20px);
             }
         }
+    }
+    .result-job {
+        .result-job-container {
+            @include height(368px);
+        }
+        // .job-cnn-1, .job-bant-1, .job-bb-2, .job-bb-3 {
+        //     background-position: left;
+        // }
     }
 }
