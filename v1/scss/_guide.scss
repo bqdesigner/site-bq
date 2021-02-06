@@ -65,7 +65,7 @@ $color-gray_300: rgba(46,49,49, 1);
     font-weight: 400;
     letter-spacing: .5rem;
     text-transform: uppercase;
-    color: $color_gray-200;
+    color: $color_gray-300;
     @include transition(all 0.3s ease-in-out 0s);
     &:hover {
         text-decoration: none;

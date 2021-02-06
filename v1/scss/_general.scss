@@ -72,7 +72,7 @@ header.container-fluid {
         position: relative;
         span {
             font-weight: 500;
-            color: $color_gray-200;
+            color: $color_gray-300;
             position: absolute;
             &::after {
                 content: '';
@@ -298,9 +298,6 @@ footer {
     margin: 2rem 0 5rem 0;
     p {
         @extend %text-content;
-    }
-    .capitalize {
-        text-transform: capitalize;
     }
     ul {
         list-style: none;
