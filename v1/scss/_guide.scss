@@ -47,7 +47,6 @@ $color-gray_300: rgba(46,49,49, 1);
 @mixin fontSize ($size) {
     font-size: calculateRem($size);
 }
-
 // Components
 %text-content {
     @include fontSize(18px);
@@ -71,11 +70,11 @@ $color-gray_300: rgba(46,49,49, 1);
         text-decoration: none;
         color: $color-primary;
     }
-    &::after {
-        content: '\f061';
-        font-family: FontAwesome;
-        color: $color-secondary;
-    }
+    // &::after {
+    //     content: '\f061';
+    //     font-family: FontAwesome;
+    //     color: $color-secondary;
+    // }
 }
 %title-base {
     @include fontSize(40px);

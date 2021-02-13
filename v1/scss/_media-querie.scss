@@ -90,6 +90,13 @@
             }
         }
     }
+    footer {
+        .contact {
+            h2 {
+                @include fontSize(32px);
+            }
+        }
+    }
     #jobs-done {
         h2 {
             @include fontSize(24px);
